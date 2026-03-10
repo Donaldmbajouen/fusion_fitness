@@ -8,8 +8,8 @@ import { useTranslation } from "@/lib/i18n";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Default coordinates for Paris (can be customized in CMS)
-const DEFAULT_COORDS = { lat: 48.8566, lng: 2.3522 };
+// Default coordinates for Supérette Biyem Assi, Yaoundé
+const DEFAULT_COORDS = { lat: 3.8366263, lng: 11.4835061 };
 
 const ContactSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -75,7 +75,7 @@ const ContactSection = () => {
       new window.google.maps.Marker({
         position: coords,
         map,
-        title: "POWER FITNESS CLUB",
+        title: "Complexe Fusion Fitness",
         icon: {
           path: 0, // google.maps.SymbolPath.CIRCLE
           scale: 12,
@@ -114,8 +114,9 @@ const ContactSection = () => {
 
   const contactItems = [
     { icon: MapPin, label: t("contact.address"), value: contact.address },
-    { icon: Phone, label: t("contact.phone"), value: contact.phone },
+    { icon: Phone, label: t("contact.mobile"), value: contact.phone },
     { icon: Mail, label: t("contact.email"), value: contact.email },
+    { icon: MessageCircle, label: t("contact.messenger"), value: contact.messenger },
     { icon: Clock, label: t("contact.hours"), value: t("contact.hours.value") },
   ];
 
@@ -165,7 +166,7 @@ const ContactSection = () => {
           {/* WhatsApp CTA */}
           <div className="text-center mb-10 md:mb-16">
             <a
-              href={getWhatsAppLink("Bonjour, j'ai une question concernant POWER FITNESS CLUB.")}
+              href={getWhatsAppLink("Bonjour, j'ai une question concernant Complexe Fusion Fitness.")}
               target="_blank"
               rel="noopener noreferrer"
             >

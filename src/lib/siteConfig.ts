@@ -38,6 +38,7 @@ export interface ContactInfo {
   phone: string;
   email: string;
   whatsappNumber: string;
+  messenger: string;
 }
 
 export interface Subscription {
@@ -117,10 +118,11 @@ const defaultConfig: SiteConfig = {
     },
   ],
   contact: {
-    address: "Yaoundé, Golf-Bastos (face station Neptune), Cameroun",
-    phone: "+237 6 57 00 00 07 / +237 6 95 32 22 90",
-    email: "contact@powerfitness.cm",
-    whatsappNumber: "+237 6 57 00 00 07",
+    address: "Supérette Biyem Assi, Yaoundé, Cameroon",
+    phone: "+237 6 51 81 87 48",
+    email: "complexefusionfitness237@gmail.com",
+    whatsappNumber: "+237 6 89 62 60 04",
+    messenger: "Complexe Fusion Fitness",
   },
   galleryImages: [
     "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",

@@ -6,12 +6,13 @@ const PromotionsSlider = () => {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const promotions = [
-    { id: "1", image: "/promo1.jpg" },
-    { id: "2", image: "/promo6.jpg" },
-    { id: "3", image: "/promo4.jpg" },
-    { id: "4", image: "/promo5.jpg" },
-    { id: "5", image: "/promo10.jpg" },
-    { id: "6", image: "/promo20.jpg" },
+    { id: "1", image: "/cff3.jpg", label: "Séance cardio ciblée" },
+    { id: "2", image: "/cff12.jpg", label: "Coaching personnalisé" },
+    { id: "3", image: "/cff14.jpg", label: "Force et équilibre" },
+    { id: "4", image: "/cff34.jpg", label: "Ambiance Studio" },
+    { id: "5", image: "/CFF.jpg", label: "Logo Complexe Fusion" },
+    { id: "6", image: "/ff.jpg", label: "Énergie collective" },
+    { id: "7", image: "/fcf1.jpg", label: "Mobilité et détente" },
   ];
 
   const itemsPerSlide = 3;
@@ -74,9 +75,10 @@ const PromotionsSlider = () => {
                       >
                         <img
                           src={promo.image}
-                          alt={`Promotion ${promo.id}`}
+                          alt={promo.label}
                           className="w-full h-full object-cover"
                         />
+                        <span className="sr-only">{promo.label}</span>
                       </div>
                     ))}
                 </div>

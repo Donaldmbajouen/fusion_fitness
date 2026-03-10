@@ -158,7 +158,9 @@ const translations = {
   },
   "contact.address": { fr: "ADRESSE", en: "ADDRESS" },
   "contact.phone": { fr: "TÉLÉPHONE", en: "PHONE" },
+  "contact.mobile": { fr: "MOBILE", en: "MOBILE" },
   "contact.email": { fr: "EMAIL", en: "EMAIL" },
+  "contact.messenger": { fr: "MESSENGER", en: "MESSENGER" },
   "contact.hours": { fr: "HORAIRES", en: "HOURS" },
   "contact.hours.value": {
     fr: "Lun-Ven: 6h-23h | Sam-Dim: 8h-20h",

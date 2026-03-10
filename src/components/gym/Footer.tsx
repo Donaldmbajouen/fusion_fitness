@@ -87,7 +87,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-border text-center">
           <p className="font-body text-[10px] md:text-xs text-muted-foreground tracking-wider">
-            © {currentYear} POWER FITNESS CLUB. {t("footer.rights")}
+            © {currentYear} COMPLEXE FUSION FITNESS CLUB. {t("footer.rights")}
           </p>
         </div>
       </div>
