@@ -1,0 +1,183 @@
+/* Complexe Fusion Fitness — palette inspired by the provided logo */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 12%;
+
+    --primary: 333 95% 48%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 146 82% 37%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 30%;
+
+    --accent: 26 100% 60%;
+    --accent-lighter: 342 100% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 342 95% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 88%;
+    --input: 0 0% 96%;
+    --ring: 0 0% 80%;
+
+    --radius: 0rem;
+
+    --gradient-primary: linear-gradient(135deg, hsl(342 95% 55%) 0%, hsl(var(--accent)) 60%, hsl(146 82% 37%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 98%) 0%, hsl(0 0% 90%) 100%);
+    --gradient-glow: radial-gradient(circle at center, hsl(var(--accent) / 0.4), transparent 70%);
+
+    --shadow-brutal: 6px 6px 0px hsl(var(--accent) / 0.25);
+    --shadow-glow: 0 0 35px hsl(var(--accent) / 0.4);
+    --shadow-soft: 0 25px 50px -12px hsl(0 0% 0% / 0.1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 12%;
+    --sidebar-primary: 333 95% 50%;
+    --sidebar-primary-foreground: 0 0% 96%;
+    --sidebar-accent: 146 82% 37%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 92%;
+    --sidebar-ring: 0 0% 80%;
+  }
+
+  .dark {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 96%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 333 95% 60%;
+    --primary-foreground: 0 0% 12%;
+    --secondary: 146 82% 42%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 26 100% 65%;
+    --accent-lighter: 342 95% 70%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 342 95% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 18%;
+    --input: 0 0% 16%;
+    --ring: 0 0% 70%;
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 333 95% 60%;
+    --sidebar-primary-foreground: 0 0% 12%;
+    --sidebar-accent: 146 82% 37%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 22%;
+    --sidebar-ring: 0 0% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .font-display {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.08em;
+  }
+
+  ::selection {
+    background: hsl(342 95% 55% / 0.35);
+    color: hsl(0 0% 100%);
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(125deg, hsl(342 95% 55%) 0%, hsl(var(--accent)) 60%, hsl(146 82% 37%) 100%);
+  }
+
+  .border-brutal {
+    @apply border-2;
+    border-color: hsl(var(--accent) / 0.5);
+    box-shadow: var(--shadow-brutal);
+  }
+
+  .glow-effect {
+    box-shadow: var(--shadow-glow), 0 0 25px hsl(var(--accent) / 0.45);
+  }
+
+  .glass-dark {
+    @apply bg-card/80 backdrop-blur-xl border border-border;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .line-accent {
+    @apply relative;
+  }
+
+  .line-accent::after {
+    content: '';
+    @apply absolute -bottom-2 left-0 w-16 h-1;
+    background-image: linear-gradient(90deg, hsl(342 95% 55%), hsl(var(--accent)));
+  }
+
+  .clip-diagonal {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .clip-diagonal-reverse {
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@layer utilities {
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+}
